@@ -1,0 +1,12 @@
+<div class="panel-body">
+  <div class="form-group products_rule_products">
+    <%= label_tag "#{param_prefix}_memberships", Spree.t('membership_rule.choose_memberships') %>
+    <%= select_tag("#{param_prefix}[membership_ids]", options_from_collection_for_select(Spree::Membership.all, :id, :name, promotion_rule.membership_ids), class: 'select_product form-control', multiple: true) %>
+    <%#= hidden_field_tag "#{param_prefix}[membership_ids_string]", promotion_rule.membership_ids.join(","), class: "product_picker" %>
+  </div>
+  <div class="form-group no-marginb">
+    <%= label_tag Spree.t('membership_rule.label') %>
+    <%= select_tag("#{param_prefix}[preferred_match_policy]", options_for_select(Spree::Promotion::Rules::Membership::MATCH_POLICIES.map{|s| [Spree.t("membership_rule.match_#{s}"),s] }, promotion_rule.preferred_match_policy), {class: 'select_product form-control'}) %>
+  </div>
+</div>
+

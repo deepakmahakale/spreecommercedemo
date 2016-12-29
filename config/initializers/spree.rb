@@ -16,3 +16,4 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+Rails.application.config.spree.promotions.rules << Spree::Promotion::Rules::Membership

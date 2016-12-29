@@ -20,4 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  spree:
+    promotion_rule_types:
+      membership:
+        name: "Membership"
+        description: "User must have specified membership(s)"
+    membership_rule:
+      choose_memberships: Choose memberships
+      label: User must have X membership(s)
+      match_all: all
+      match_any: at least one
+      match_none: none

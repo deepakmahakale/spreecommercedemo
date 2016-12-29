@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201175680) do
+ActiveRecord::Schema.define(version: 20161229083138) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -206,6 +206,18 @@ ActiveRecord::Schema.define(version: 20161201175680) do
   end
 
   add_index "spree_log_entries", ["source_id", "source_type"], name: "index_spree_log_entries_on_source_id_and_source_type"
+
+  create_table "spree_membership_promotion_rules", force: :cascade do |t|
+    t.integer "membership_id"
+    t.integer "promotion_rule_id"
+  end
+
+  add_index "spree_membership_promotion_rules", ["membership_id"], name: "index_spree_membership_promotion_rules_on_membership_id"
+  add_index "spree_membership_promotion_rules", ["promotion_rule_id"], name: "index_spree_membership_promotion_rules_on_promotion_rule_id"
+
+  create_table "spree_memberships", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "spree_option_type_prototypes", force: :cascade do |t|
     t.integer "prototype_id"
