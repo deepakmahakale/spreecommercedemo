@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
@@ -24,7 +24,7 @@ gem 'spree', '~> 3.1.0'
 gem 'spree_auth_devise', '~> 3.1.0'
 gem 'spree_gateway', '~> 3.1.0'
 gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly',
-                              branch: '3-0-stable'
+                              branch: '3-1-stable'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'aws-sdk-v1'

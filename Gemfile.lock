@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/spree-contrib/spree-product-assembly.git
-  revision: c5e8b5eb6935a8b895e5357bab41f9568aaaf396
-  branch: 3-0-stable
+  revision: abc3a5e23ebec04e0cb2d49d1c67bb80425b15b7
+  branch: 3-1-stable
   specs:
-    spree_product_assembly (3.0.0)
-      spree_backend (~> 3.0)
+    spree_product_assembly (3.1.0)
+      spree_backend (~> 3.1.0.beta)
 
 GEM
   remote: https://rubygems.org/
